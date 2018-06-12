@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from home.views import get_index
-from accounts.views import login, register, logout
+from accounts.views import login, register, logout, profile
 
 
 
@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^$', get_index),
     url(r'^accounts/login$', login, name="login"),
     url(r'^accounts/register$', register, name="register"),
-    url(r'^accounts/logout$', logout, name="logout")
+    url(r'^accounts/logout$', logout, name="logout"),
+    url(r'^accounts/profile$', profile, name="profile")
 ]
